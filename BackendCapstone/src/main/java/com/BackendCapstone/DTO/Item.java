@@ -12,7 +12,6 @@ import javax.persistence.*;
 @Entity
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 
-//replace this with the initialized table once done
 @Table(name="item")
 
 

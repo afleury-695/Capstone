@@ -1,8 +1,5 @@
 package com.BackendCapstone.Controller;
 
-//personal notes on this file: replaced the value of
-//delete with /items/{id} instead of just items. Test this
-
 
 //java file imports
 import com.BackendCapstone.DTO.Item;
