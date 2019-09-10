@@ -5,6 +5,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
 
@@ -12,7 +13,7 @@ import javax.persistence.*;
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 
 //replace this with the initialized table once done
-//@Table(name="produce")
+@Table(name="item")
 
 
 public class Item {
@@ -26,7 +27,7 @@ public class Item {
 
     private double price;
 
-    private boolean isImported = false;
+    private boolean isImported;
 
     private String category;
 
