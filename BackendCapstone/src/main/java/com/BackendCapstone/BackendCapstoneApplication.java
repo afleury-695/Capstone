@@ -1,13 +1,13 @@
-package com.company.CapstoneBackend;
+package com.BackendCapstone;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CapstoneBackendApplication {
+public class BackendCapstoneApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CapstoneBackendApplication.class, args);
+		SpringApplication.run(BackendCapstoneApplication.class, args);
 	}
 
 }
