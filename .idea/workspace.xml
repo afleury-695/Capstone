@@ -11,37 +11,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CapstoneBackend/src/main/java/com/company/CapstoneBackend/CapstoneBackendApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CapstoneBackend/pom.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CapstoneBackend/mvnw.cmd">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CapstoneBackend/src/main/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/BackendCapstone/src/main/java/com/BackendCapstone/BackendCapstoneApplication.java">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -60,7 +36,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -71,121 +46,70 @@
             <path>
               <item name="CapstoneFinalBackendJava" type="b2602c69:ProjectViewProjectNode" />
               <item name="FinalCapstone-TEK" type="462c0819:PsiDirectoryNode" />
-              <item name="CapstoneBackend" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CapstoneFinalBackendJava" type="b2602c69:ProjectViewProjectNode" />
               <item name="FinalCapstone-TEK" type="462c0819:PsiDirectoryNode" />
-              <item name="CapstoneBackend" type="462c0819:PsiDirectoryNode" />
+              <item name="BackendCapstone" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CapstoneFinalBackendJava" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalCapstone-TEK" type="462c0819:PsiDirectoryNode" />
+              <item name="BackendCapstone" type="462c0819:PsiDirectoryNode" />
+              <item name=".mvn" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CapstoneFinalBackendJava" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalCapstone-TEK" type="462c0819:PsiDirectoryNode" />
+              <item name="BackendCapstone" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CapstoneFinalBackendJava" type="b2602c69:ProjectViewProjectNode" />
               <item name="FinalCapstone-TEK" type="462c0819:PsiDirectoryNode" />
-              <item name="CapstoneBackend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CapstoneFinalBackendJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FinalCapstone-TEK" type="462c0819:PsiDirectoryNode" />
-              <item name="CapstoneBackend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CapstoneFinalBackendJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FinalCapstone-TEK" type="462c0819:PsiDirectoryNode" />
-              <item name="CapstoneBackend" type="462c0819:PsiDirectoryNode" />
+              <item name="BackendCapstone" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CapstoneFinalBackendJava" type="b2602c69:ProjectViewProjectNode" />
               <item name="FinalCapstone-TEK" type="462c0819:PsiDirectoryNode" />
-              <item name="CapstoneBackend" type="462c0819:PsiDirectoryNode" />
+              <item name="BackendCapstone" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CapstoneFinalBackendJava" type="b2602c69:ProjectViewProjectNode" />
               <item name="FinalCapstone-TEK" type="462c0819:PsiDirectoryNode" />
-              <item name="CapstoneBackend" type="462c0819:PsiDirectoryNode" />
+              <item name="BackendCapstone" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="CapstoneBackend" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CapstoneFinalBackendJava" type="b2602c69:ProjectViewProjectNode" />
               <item name="FinalCapstone-TEK" type="462c0819:PsiDirectoryNode" />
-              <item name="CapstoneBackend" type="462c0819:PsiDirectoryNode" />
+              <item name="BackendCapstone" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CapstoneFinalBackendJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FinalCapstone-TEK" type="462c0819:PsiDirectoryNode" />
-              <item name="CapstoneBackend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CapstoneFinalBackendJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FinalCapstone-TEK" type="462c0819:PsiDirectoryNode" />
-              <item name="CapstoneBackend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CapstoneFinalBackendJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FinalCapstone-TEK" type="462c0819:PsiDirectoryNode" />
-              <item name="CapstoneBackend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CapstoneFinalBackendJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FinalCapstone-TEK" type="462c0819:PsiDirectoryNode" />
-              <item name="CapstoneBackend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CapstoneFinalBackendJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FinalCapstone-TEK" type="462c0819:PsiDirectoryNode" />
-              <item name="CapstoneBackend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="CapstoneBackend" type="462c0819:PsiDirectoryNode" />
+              <item name="BackendCapstone" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -219,7 +143,7 @@
     <frame x="42" y="23" width="1353" height="811" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2532418" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25705567" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -247,20 +171,12 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="10" lean-forward="true" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CapstoneBackend/src/main/java/com/company/CapstoneBackend/Items.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml" />
+    <entry file="file://$PROJECT_DIR$/CapstoneBackend/src/main/java/com/company/CapstoneBackend/Items.java" />
     <entry file="file://$PROJECT_DIR$/CapstoneBackend/src/main/java/com/company/CapstoneBackend/CapstoneBackendApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
@@ -276,6 +192,9 @@
           <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BackendCapstone/src/main/java/com/BackendCapstone/BackendCapstoneApplication.java">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">
