@@ -1,4 +1,4 @@
-
+<div class="background-color">
 <div class="bootstrap-card">
 <div class="card-body">
     <img src= "{{ item.image }}" class="card-img-top" alt="...">
@@ -14,4 +14,5 @@
     <button type="button" class="btn btn-success" [class.disabled]="qtyToPurchase > item.quantity" (click)="onAddToCart(item)" style="margin: 6px;"> {{ buttonText }}</button>
   </div>
   </div>
+</div>
 </div>
