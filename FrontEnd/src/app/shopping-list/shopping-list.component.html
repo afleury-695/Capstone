@@ -1,0 +1,11 @@
+<div class="jumbotron">
+    <h5> All Items </h5>
+    <p> Welcome to Ultimate Shopping Dallas! We pride ourselves on providing an incredible shopping experience.  Don't believe us? Check out our reviews.</p>
+    <input [(ngModel)]="searchTerm" class="form-control" placeholder="Search">
+
+    <div *ngFor="let item of (allItems)" class="card" style="width: 18rem;">
+    <!-- <div *ngFor="let item of (allItems | search: searchTerm)" class="card" style="width: 18rem;"> -->
+        <app-shopping-card [item]=item ></app-shopping-card>
+    </div>
+    
+</div>

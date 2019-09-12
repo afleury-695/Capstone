@@ -1,0 +1,17 @@
+
+<div class="bootstrap-card">
+<div class="card-body">
+    <img src= "{{ item.image }}" class="card-img-top" alt="...">
+    <h5 class="card-title">{{ item.name }} </h5>
+    <p> CATEGORY: {{ item.category }} </p>
+    <!-- <p class="card-text"> Ultimate Shopping Dallas takes pride in every product.</p> -->
+    <span class="float-left">Price:  {{ item.price | currency }} </span>
+    <span class="float-right"> Available: {{ item.quantity }} </span> <br>
+    <a [routerLink]="[items/id]" class="btn btn-primary">View Details</a>
+
+  <div class="row">
+    <input [(ngModel)]="qtyToPurchase" type="number" class="form-control" placeholder="Qty" [max]="item.quantity">
+    <button type="button" class="btn btn-success" [class.disabled]="qtyToPurchase > item.quantity" (click)="onAddToCart(item)"> {{ buttonText }}</button>
+  </div>
+  </div>
+</div>

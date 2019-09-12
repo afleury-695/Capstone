@@ -8,30 +8,40 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 
 @Entity
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 
-@Table(name="item")
+@Table(name="items2")
 
 
 public class Item {
 
+
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    //added an itemId to track each item as it moves through the system
     private int id;
 
     private String name;
 
+
     private double price;
 
+
     private boolean isImported;
+
 
     private String category;
 
 
-    //getters and setters
+    private int quantity;
+
+
+    private String image;
+
+//getters and setters
 
     public int getId() {
         return id;
@@ -72,4 +82,12 @@ public class Item {
     public void setCategory(String category) {
         this.category = category;
     }
+
+    public int getQuantity() { return quantity; }
+
+    public void setQuantity(int quantity) { this.quantity = quantity; }
+
+    public String getImage() { return image; }
+
+    public void setImage(String image) { this.image = image; }
 }

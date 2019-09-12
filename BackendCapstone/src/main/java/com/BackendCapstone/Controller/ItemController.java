@@ -11,7 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
-//connecting to localhost
+//connecting to angular program
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
 
