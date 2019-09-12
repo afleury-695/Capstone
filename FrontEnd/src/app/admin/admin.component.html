@@ -29,6 +29,9 @@
             <button *ngIf="itemIdBeingEdited !== undefined" type="button" class="btn btn-primary mx-2" (click)="onCancelEditItem()"> Cancel </button>
             <button type="submit" class="btn btn-primary">Submit</button>
           
+            <br> 
+            <br> 
+            <br> 
           </form>
         </div>
         <div class="row">
@@ -39,7 +42,7 @@
               </div>
               <div class="col-md-6">
                 <button class="btn btn-danger float-right" (click)="onDeleteItem(item)">X</button>
-                <button class="btn btn-info float-right mx-2" (click)="onStartEditItem(item.id)"> Edit </button>
+                <button class="btn btn-info float-right mx-2" (click)="onStartEditItem(item)"> Edit </button>
               </div>
             </div>
           </div>

@@ -11,6 +11,7 @@ export class Item {
   category: string; 
   quantity: number; 
   image: string; 
+  available: number; 
 
   constructor(id: number, name: string, price: number, isImported: boolean, category: string, quantity: number, image: string){
     this.id = id; 
@@ -20,6 +21,7 @@ export class Item {
     this.category = category; 
     this.quantity = quantity; 
     this.image = image; 
+    this.available = this.available;
   }
 } 
 

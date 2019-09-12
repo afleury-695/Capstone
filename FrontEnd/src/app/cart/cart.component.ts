@@ -21,6 +21,7 @@ export class CartComponent implements OnInit {
 
   ngOnInit() {
     this.getItemsInCart();
+    this.calculateTotal();
   }
   getItemsInCart() { 
     this.itemsInCart = this.cartService.getItemsInCart();
@@ -35,46 +36,37 @@ export class CartComponent implements OnInit {
 
         setTimeout(() => { 
           this.router.navigate(["/items"])
-        }, 2500); 
+        }, 2000); 
       },
       err => { 
         console.log(err)
       }
     );
   }
-onRemoveItemFromCart(i: number) { 
+
+  calculateTotal() { 
+    this.total = this.itemsInCart.reduce((total, currVal) => total + (currVal.price * currVal.quantity), 0)
+  }
+
+  onDecreaseQuantity(item: Item) { 
+    if(item.quantity > 0) { 
+      item.quantity--; 
+      this.calculateTotal(); 
+    }
+  }
+
+  onIncreaseQuantity(item: Item) { 
+    if(item.quantity < item.available) { 
+      ++item.quantity; 
+      this.calculateTotal(); 
+    }
+  }
+
+  onRemoveItemFromCart(i: number) { 
   this.cartService.deleteItemByIndex(i);
   this.getItemsInCart();
+  this.calculateTotal();
 }
 }
 
-  // ngOnInit() {
-  //   this.getItemsInCart();
-  //   this.calculateTotal();
-  // }
-
-  // onRemoveItemFromCart(index: number) { 
-  //   this.cartService.removeItemFromCart(index);
-  //   this.getItemsInCart();
-  //   this.calculateTotal();
-  // }
-  // getItemsInCart() { 
-  //   this.itemsInCart = this.cartService.getItemsInCart();
-  // }
-  // onPurchase() { 
-  //   this.cartService.purchase(this.itemsInCart).subscribe(
-  //     (res: any) => { 
-  //       this.cartService.emptyCart();
-  //       this.itemsInCart = []; 
-  //       this.infoText = "You've bought your items! Redirecting you in 3...2...1..";
-
-  //       setTimeout(() => { 
-  //         this.router.navigate["/items"];
-  //       }, 1500);
-  //     }
-  //   );
-  // }
-  // calculateTotal() { 
-  //   this.total = this.itemsInCart.reduce(total, currVal) => total + (currVal.price), 0);
-  // }
   

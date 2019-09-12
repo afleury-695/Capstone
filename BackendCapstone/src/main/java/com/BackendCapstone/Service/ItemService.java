@@ -41,4 +41,14 @@ public class ItemService {
         itemRepo.deleteById(id);
     }
 
+    //for purchasing the items via the PURCHASE route and updating the quantities we have in the actual database
+    public void purchase(Item[] item) {
+        for(Item i: item ) {
+            Item currItem= this.getItemById(i.getId());
+
+            currItem.setQuantity(currItem.getQuantity() - i.getQuantity());
+            this.updateItem(currItem, currItem.getId());
+        }
+    }
+
 }
