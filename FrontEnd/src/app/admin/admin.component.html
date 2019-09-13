@@ -1,6 +1,10 @@
 
 <div class="jumbotron">
-
+  <h1> ADMIN PORTAL </h1>
+<h4> You must be a valid admin to access administrative rights. <br> <br> Please use caution when adding, removing, or editing existing entries.  
+</h4>
+<hr>
+<br> 
     <div class="container">
         <div class="row">
           <form [formGroup]="addItemForm" (ngSubmit)="onSubmitForm()">
@@ -27,11 +31,8 @@
     
             </div>
             <button *ngIf="itemIdBeingEdited !== undefined" type="button" class="btn btn-primary mx-2" (click)="onCancelEditItem()"> Cancel </button>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          
-            <br> 
-            <br> 
-            <br> 
+            <button type="submit" class="btn btn-primary">Submit</button> <br> <br>
+    
           </form>
         </div>
         <div class="row">
