@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { Item } from '../items.service';
 import { CartService } from '../cart.service';
 
+
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
@@ -55,9 +56,10 @@ export class CartComponent implements OnInit {
     }
   }
 
-  onIncreaseQuantity(item: Item) { 
-    if(item.quantity < item.available) { 
-      ++item.quantity; 
+  onIncreaseQty(item: Item) { 
+    //go back and fix this to work with item.quantity == item.available
+    if(item.quantity < 700) { 
+      item.quantity++; 
       this.calculateTotal(); 
     }
   }

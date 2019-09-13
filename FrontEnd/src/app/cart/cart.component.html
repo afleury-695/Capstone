@@ -13,13 +13,15 @@
         <tbody>
             <tr *ngFor="let item of itemsInCart; let i = index">
                 <td>{{ item.name }}</td>
-                <td><button class="btn btn-info" [class.disabled]="item.quantity == 0" (click)="onDecreaseQuantity(item)">-</button>&nbsp;{{ item.quantity }}&nbsp;<button class="btn btn-info" [class.disabled]="item.quantity == item.available" (click)="onIncreaseQuantity(item)">+</button></td>
+                <td><button class="btn btn-info" [class.disabled]="item.quantity == 0" (click)="onDecreaseQuantity(item)">-</button>&nbsp;{{ item.quantity }}&nbsp;
+                <button class="btn btn-info" [class.disabled]="item.quantity == item.available" (click)="onIncreaseQty(item)">+</button></td>
                 <td>{{ item.price | currency }}</td>
                 <td>{{ item.quantity * item.price | currency }}</td>
                 <td><button class="btn btn-danger float-right" (click)="onRemoveItemFromCart(i)">X</button></td>
             </tr>
         </tbody>
     </table>
+    <!-- <strong *ngIf="itemsInCart.length > 0">Sales Tax Total: {{ total*0.10| currency }}</strong> -->
     <strong *ngIf="itemsInCart.length > 0">Total: {{ total | currency }}</strong>
     <br>
     <br>

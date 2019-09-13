@@ -12,13 +12,13 @@ export class ShoppingCardComponent implements OnInit {
   @Input()item: Item;
   buttonText = "Add to Cart";
   @Input() i: number; 
-  qtyToPurchase = 1;
+  qtyToPurchase: number;
 
   constructor(private cartService: CartService) { }
 
-  onAddToCart(item: Item) { 
+  onAddToCart(item: Item, qty: number) { 
     if(this.qtyToPurchase > 0 && this.qtyToPurchase <= item.quantity) { 
-      this.cartService.addItemToCart(item, this.qtyToPurchase);
+      this.cartService.addToCart(item, this.qtyToPurchase);
       this.buttonText = "Added!";
 
       setTimeout(() => { 
@@ -27,6 +27,9 @@ export class ShoppingCardComponent implements OnInit {
     }
   }
 
+  // setQtyToPurchase(item: Item, qty: number) { 
+  //   this.qtyToPurchase = this.qtyToPurchase; 
+  // }
   ngOnInit() {
   }
 

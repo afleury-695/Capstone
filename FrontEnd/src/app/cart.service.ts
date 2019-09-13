@@ -12,17 +12,18 @@ export class CartService {
 
   constructor(private http: HttpClient) { }
   
-    addItemToCart(item: Item, qty: number) { 
+    addToCart(item: Item, qty: number) { 
       let itemAlreadyInCart = false; 
+      item.quantity = qty; 
       this.itemsInCart = this.itemsInCart.map(i => { 
         if(i.id == item.id) { 
-          i.quantity += qty; 
+          item.quantity = qty; 
           itemAlreadyInCart = true; 
         }
-        return i; 
+        return item; 
       }); 
       if(!itemAlreadyInCart) { 
-        const newItem = new Item(item.id, item.name, item.price, item.isImported, item.category, item.quantity, item.image);
+        const newItem = new Item(item.id, item.name, item.price, item.isImported, item.category, item.quantity, item.image, item.qtyToPurchase);
         newItem.id = item.id; 
         this.itemsInCart.push(newItem);
       }

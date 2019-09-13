@@ -12,8 +12,9 @@ export class Item {
   quantity: number; 
   image: string; 
   available: number; 
+  qtyToPurchase: number; 
 
-  constructor(id: number, name: string, price: number, isImported: boolean, category: string, quantity: number, image: string){
+  constructor(id: number, name: string, price: number, isImported: boolean, category: string, quantity: number, image: string, available?: number, qtyToPurchase?: number) {
     this.id = id; 
     this.name = name; 
     this.price = price; 
@@ -22,6 +23,7 @@ export class Item {
     this.quantity = quantity; 
     this.image = image; 
     this.available = this.available;
+    this.qtyToPurchase = this.qtyToPurchase; 
   }
 } 
 

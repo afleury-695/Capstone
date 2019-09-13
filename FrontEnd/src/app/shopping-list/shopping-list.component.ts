@@ -15,7 +15,7 @@ export class ShoppingListComponent implements OnInit, OnDestroy {
 
   allItems: Item[] = [];
 
-  searchTerm = " ";
+  searchTerm = "";
   getSub: Subscription;
 
   constructor(private itemService: ItemsService) { }

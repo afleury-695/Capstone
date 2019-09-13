@@ -14,10 +14,10 @@
                 placeholder="Category of Item">
 
               <label for="priceItem">Price</label>
-              <input formControlName="price" type="number" class="form-control" id="priceItem" placeholder="Price of Item">
+              <input formControlName="price" type="number" class="form-control" id="priceItem" placeholder="Price of Item" [min]=1>
 
               <label for="quantityItem">Quantity</label>
-              <input formControlName="quantity" type="number" class="form-control" id="quantityItem" placeholder="Quantity of Item">
+              <input formControlName="quantity" type="number" class="form-control" id="quantityItem" placeholder="Quantity of Item" [min]=1>
 
               <label for="imageItem">Image</label>
               <input formControlName="image" type="text" class="form-control" id="imageItem" placeholder="Image URL">
