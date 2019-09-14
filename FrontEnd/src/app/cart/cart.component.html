@@ -34,13 +34,18 @@
     <button *ngIf="itemsInCart.length > 0" class="btn btn-success" (click)="onPurchase()">Purchase</button>
    
     <!-- displaying the info text that should show up when the cart length is back to 0 -->
-    <h5 *ngIf="itemsInCart.length == 0">{{ infoText }}</h5>
+    <h1 *ngIf="itemsInCart.length == 0">{{ infoText }}</h1>
 
    <div *ngIf="itemsInCart.length == 0">
     <!-- displaying the invoice calculated in the cart.ts -->
+    <br>
+    <h5 *ngIf="itemsWerePurchased != true"> Your Subtotal: {{ total | currency }} </h5>
+    <hr>
     <h5 *ngIf="itemsWerePurchased != true"> Sales Tax: {{ sales | currency }} </h5>
     <h5 *ngIf="itemsWerePurchased != true"> Import Tax: {{ imported | currency }} </h5>
+    <hr>
     <h5 *ngIf="itemsWerePurchased != true"> Total: {{ total + imported + sales | currency }} </h5>
+
   </div>
 </div>
  
