@@ -1,7 +1,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
     <a class="navbar-brand" id="ecommerce" routerLink="/">  🛒 mycart dallas  </a> &nbsp; &nbsp;
-    <a class="navbar-brand" routerLink="/items"  routerLinkActive="link-active" > all items </a>
+    <a class="navbar-brand" routerLink="/items"  routerLinkActive="link-active" (click)="onInit()" > all items </a>
     <a class="navbar-brand" routerLink="/cart" routerLinkActive="link-active"> my cart </a>
     <a class="navbar-brand" routerLink="/admin"  routerLinkActive="link-active"> admin portal </a>
     <button class="btn btn-light" (click)="onToggleAuthenticated()">LOGGED IN: {{ adminService.authenticated }} </button>
