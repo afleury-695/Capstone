@@ -41,7 +41,7 @@ export class CartComponent implements OnInit {
         this.cartService.emptyCart();
         this.itemsInCart = [];
 
-        this.infoText = "YOUR INVOICE: ";
+        this.infoText = "Invoice: ";
 
         // setTimeout(() => { 
         //   this.router.navigate(["/items"])
