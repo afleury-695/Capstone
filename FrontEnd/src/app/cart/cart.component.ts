@@ -67,6 +67,8 @@ export class CartComponent implements OnInit {
   onDecreaseQuantity(item: Item) { 
     if(item.quantity > 0) { 
       item.quantity--; 
+      this.calculateImported();
+      this.calculateSales();
       this.calculateTotal(); 
     }
   }
@@ -75,6 +77,8 @@ export class CartComponent implements OnInit {
     //go back and fix this to work with item.quantity == item.available
     if(item.quantity < 500) { 
       item.quantity++; 
+      this.calculateImported();
+      this.calculateSales();
       this.calculateTotal(); 
     }
   }
@@ -82,6 +86,8 @@ export class CartComponent implements OnInit {
   onRemoveItemFromCart(i: number) { 
   this.cartService.deleteItemByIndex(i);
   this.getItemsInCart();
+  this.calculateImported();
+  this.calculateSales();
   this.calculateTotal();
 }
 }
