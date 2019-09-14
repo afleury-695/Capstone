@@ -33,9 +33,9 @@
 
 
     <!-- <tr *ngFor="let item of itemsInCart; let i = index"> -->
-    <h5 *ngIf="itemsWerePurchased != false"> Sales Tax: {{ sales | currency }} </h5>
-    <h5 *ngIf="itemsWerePurchased != false"> Import Tax: {{ imported | currency }} </h5>
-    <h5 *ngIf="itemsWerePurchased != false"> Total: {{ total + imported + sales | currency }} </h5>
+    <h5 *ngIf="itemsWerePurchased != true"> Sales Tax: {{ sales | currency }} </h5>
+    <h5 *ngIf="itemsWerePurchased != true"> Import Tax: {{ imported | currency }} </h5>
+    <h5 *ngIf="itemsWerePurchased != true"> Total: {{ total + imported + sales | currency }} </h5>
   
   </div>
  

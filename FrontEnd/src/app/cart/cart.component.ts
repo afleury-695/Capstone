@@ -21,6 +21,8 @@ export class CartComponent implements OnInit {
   sales = 0; 
   imported = 0; 
 
+  itemsWerePurchased = false; 
+
   constructor(private cartService: CartService, private router: Router) { }
 
   ngOnInit() {
@@ -39,11 +41,11 @@ export class CartComponent implements OnInit {
         this.cartService.emptyCart();
         this.itemsInCart = [];
 
-        this.infoText = "You bought this stuff! We're gonna send you back now so you can buy more! Happy shopping!";
+        this.infoText = "YOUR INVOICE: ";
 
-        setTimeout(() => { 
-          this.router.navigate(["/items"])
-        }, 2000); 
+        // setTimeout(() => { 
+        //   this.router.navigate(["/items"])
+        // }, 2000); 
       },
       err => { 
         console.log(err)
