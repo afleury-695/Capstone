@@ -1,4 +1,3 @@
-//go remove extra text from the bottom here
 
 
 import { Component, OnInit } from '@angular/core';
@@ -18,8 +17,8 @@ export class CartComponent implements OnInit {
   infoText = "No items in cart."
   apiUrl = ''; 
 
-  sales = 0; 
-  imported = 0; 
+  sales; 
+  imported; 
 
   itemsWerePurchased = false; 
 
@@ -27,14 +26,16 @@ export class CartComponent implements OnInit {
 
   ngOnInit() {
     this.getItemsInCart();
-    this.calculateImported();
-    this.calculateSales();
+    // this.calculateImported();
+    // this.calculateSales();
     this.calculateTotal();
   }
   getItemsInCart() { 
     this.itemsInCart = this.cartService.getItemsInCart();
   }
   onPurchase() { 
+    this.calculateSales();
+    this.calculateImported();
     let itemsWerePurchased = true; 
     this.cartService.purchase(this.itemsInCart).subscribe(
       (res: any) => { 
@@ -53,6 +54,18 @@ export class CartComponent implements OnInit {
     );
   }
 
+
+  // OnInitTax(item) { 
+  //   this.cartService.updateTax(item).subscribe(
+  //     (res: any) => { 
+  //       console.log("Went through"); 
+  //     },
+  //     err => { 
+  //       console.log(err)
+  //     }
+  //   );
+  // }
+
   calculateTotal() { 
     this.total = this.itemsInCart.reduce((total, currVal) => total + (currVal.price * currVal.quantity), 0)
   }
@@ -69,8 +82,8 @@ export class CartComponent implements OnInit {
   onDecreaseQuantity(item: Item) { 
     if(item.quantity > 0) { 
       item.quantity--; 
-      this.calculateImported();
-      this.calculateSales();
+      // this.calculateImported();
+      // this.calculateSales();
       this.calculateTotal(); 
     }
   }
@@ -79,8 +92,8 @@ export class CartComponent implements OnInit {
     //go back and fix this to work with item.quantity == item.available
     if(item.quantity < 500) { 
       item.quantity++; 
-      this.calculateImported();
-      this.calculateSales();
+      // this.calculateImported();
+      // this.calculateSales();
       this.calculateTotal(); 
     }
   }
@@ -88,10 +101,8 @@ export class CartComponent implements OnInit {
   onRemoveItemFromCart(i: number) { 
   this.cartService.deleteItemByIndex(i);
   this.getItemsInCart();
-  this.calculateImported();
-  this.calculateSales();
+  // this.calculateImported();
+  // this.calculateSales();
   this.calculateTotal();
 }
 }
-
-  

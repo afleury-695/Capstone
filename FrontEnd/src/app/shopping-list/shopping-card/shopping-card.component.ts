@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Item } from "src/app/items.service";
+import { Item, ItemsService } from "src/app/items.service";
 import { CartService } from 'src/app/cart.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-shopping-card',
@@ -14,10 +16,11 @@ export class ShoppingCardComponent implements OnInit {
   @Input() i: number; 
   qtyToPurchase: number;
 
-  constructor(private cartService: CartService) { }
+  constructor(private cartService: CartService, private router: Router, private itemsService: ItemsService) { }
 
   onAddToCart(item: Item, qty: number) { 
     if(this.qtyToPurchase > 0 && this.qtyToPurchase <= item.quantity) { 
+      this.itemsService.getItems();
       this.cartService.addToCart(item, this.qtyToPurchase);
       this.buttonText = "Added!";
 
@@ -25,6 +28,21 @@ export class ShoppingCardComponent implements OnInit {
         this.buttonText = "Add to Cart";
       }, 1500);
     }
+  }
+
+  // OnInitTax(item: Item[]) { 
+  //   this.cartService.updateTax(item);
+  // }
+
+  OnInitTax(item: Item) { 
+    this.cartService.updateTax(item).subscribe(
+      (res: any) => { 
+        console.log("Went through"); 
+      },
+      err => { 
+        console.log(err)
+      }
+    );
   }
 
   // setQtyToPurchase(item: Item, qty: number) { 

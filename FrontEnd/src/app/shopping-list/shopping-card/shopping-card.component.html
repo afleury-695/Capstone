@@ -14,7 +14,7 @@
     <input [(ngModel)]="qtyToPurchase" type="number" class="form-control" placeholder="Select Quantity" [max]="item.quantity" style="width: 220px; margin-left: 10px; position: absolute;">
     <!-- <button type="submit" class="btn btn-info" (click)="setQtyToPurchase(item)"> Select Quantity </button> -->
     <br> <br> 
-    <button type="button" id="addtocartbutton" class="btn btn-success" [class.disabled]="qtyToPurchase > item.quantity" (click)="onAddToCart(item)" style="margin: 6px; width: 300px; "> {{ buttonText }}</button>
+    <button type="button" id="addtocartbutton" class="btn btn-success" [class.disabled]="qtyToPurchase > item.quantity"  (click)="OnInitTax(item)" (click)="onAddToCart(item)" style="margin: 6px; width: 300px;"> {{ buttonText }}</button>
   </div>
   </div>
 </div>

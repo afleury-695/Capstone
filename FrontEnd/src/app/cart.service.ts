@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Item } from '../app/items.service';
 import { Observable } from 'rxjs';
+import { CartComponent } from './cart/cart.component';
 
 @Injectable({
   providedIn: 'root'
@@ -40,9 +41,19 @@ export class CartService {
     }
     purchase(item: Item[]): Observable<null> {
       const url = `${this.apiUrl}/purchase`;
-
+  
       console.log(item);
       return this.http.post<null>(url, item);
-   
+      
     }
+    // posting the tax to the database on adding to cart
+    updateTax(item: Item): Observable<null> {
+      const url = `${this.apiUrl}/taxed`;
+      console.log(item);
+      return this.http.post<null>(url, item);
+    }
+
+    // addToCartWrapper(item: Item[], qty: number) { 
+
+    // }
   }
