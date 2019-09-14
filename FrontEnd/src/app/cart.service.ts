@@ -23,7 +23,7 @@ export class CartService {
         return i; 
       }); 
       if(!itemAlreadyInCart) { 
-        const newItem = new Item(item.id, item.name, item.price, item.isImported, item.category, item.quantity, item.image, item.available, item.qtyToPurchase);
+        const newItem = new Item(item.id, item.name, item.price, item.isImported, item.category, item.quantity, item.image, item.available, item.qtyToPurchase, item.salesTax, item.importTax);
         newItem.id = item.id; 
         this.itemsInCart.push(newItem);
       }

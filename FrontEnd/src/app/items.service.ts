@@ -14,7 +14,11 @@ export class Item {
   available: number; 
   qtyToPurchase: number; 
 
-  constructor(id: number, name: string, price: number, isImported: boolean, category: string, quantity: number, image: string, available?: number, qtyToPurchase?: number) {
+  //tax items 
+  salesTax: number; 
+  importTax: number; 
+
+  constructor(id: number, name: string, price: number, isImported: boolean, category: string, quantity: number, image: string, available?: number, qtyToPurchase?: number, salesTax?: number, importTax?: number) {
     this.id = id; 
     this.name = name; 
     this.price = price; 
@@ -24,6 +28,10 @@ export class Item {
     this.image = image; 
     this.available = this.available;
     this.qtyToPurchase = this.qtyToPurchase; 
+
+    //
+    this.salesTax = salesTax; 
+    this.importTax = importTax;
   }
 } 
 

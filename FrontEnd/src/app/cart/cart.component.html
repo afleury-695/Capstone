@@ -24,9 +24,18 @@
         </tbody>
     </table>
     <!-- <strong *ngIf="itemsInCart.length > 0">Sales Tax Total: {{ total*0.10| currency }}</strong> -->
-    <strong *ngIf="itemsInCart.length > 0">Total: {{ total | currency }}</strong>
+    <strong *ngIf="itemsInCart.length > 0">Subtotal: {{ total | currency }}</strong> <br>
+   
     <br>
     <br>
     <button *ngIf="itemsInCart.length > 0" class="btn btn-success" (click)="onPurchase()">Purchase</button>
     <h5 *ngIf="itemsInCart.length == 0">{{ infoText }}</h5>
+
+
+    <tr *ngFor="let item of itemsInCart; let i = index">
+    <h5 *ngIf="itemsWerePurchased != false"> Sales Tax: {{ sales | currency }} </h5>
+    <h5 *ngIf="itemsWerePurchased != false"> Import Tax: {{ imported | currency }} </h5>
+    <h5 *ngIf="itemsWerePurchased != false"> Total: {{ total + imported + sales | currency }} </h5>
+  
   </div>
+ 

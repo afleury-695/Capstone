@@ -18,16 +18,22 @@ export class CartComponent implements OnInit {
   infoText = "No items in cart."
   apiUrl = ''; 
 
+  sales = 0; 
+  imported = 0; 
+
   constructor(private cartService: CartService, private router: Router) { }
 
   ngOnInit() {
     this.getItemsInCart();
+    this.calculateImported();
+    this.calculateSales();
     this.calculateTotal();
   }
   getItemsInCart() { 
     this.itemsInCart = this.cartService.getItemsInCart();
   }
   onPurchase() { 
+    let itemsWerePurchased = true; 
     this.cartService.purchase(this.itemsInCart).subscribe(
       (res: any) => { 
         this.cartService.emptyCart();
@@ -48,6 +54,15 @@ export class CartComponent implements OnInit {
   calculateTotal() { 
     this.total = this.itemsInCart.reduce((total, currVal) => total + (currVal.price * currVal.quantity), 0)
   }
+
+  calculateSales() { 
+    this.sales = this.itemsInCart.reduce((sales, currVal) => sales + (currVal.salesTax * currVal.quantity), 0)
+  }
+
+  calculateImported() { 
+    this.imported = this.itemsInCart.reduce((imported, currVal) => imported + (currVal.importTax * currVal.quantity), 0)
+  }
+
 
   onDecreaseQuantity(item: Item) { 
     if(item.quantity > 0) { 
