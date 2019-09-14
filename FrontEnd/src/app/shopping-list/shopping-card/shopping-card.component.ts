@@ -49,6 +49,11 @@ export class ShoppingCardComponent implements OnInit {
   //   this.qtyToPurchase = this.qtyToPurchase; 
   // }
   ngOnInit() {
-  }
+    this.OnInitTax(this.item);
+  
+  setTimeout(() => { 
+      console.log(this.item)
+  }, 1500);
 
+}
 }

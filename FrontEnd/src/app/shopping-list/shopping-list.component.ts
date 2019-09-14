@@ -6,6 +6,7 @@ import { ItemsService } from '../items.service';
 
 
 
+
 @Component({
   selector: 'app-shopping-list',
   templateUrl: './shopping-list.component.html',
@@ -22,6 +23,7 @@ export class ShoppingListComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.getItems();
+
   }
 
   ngOnDestroy() { 

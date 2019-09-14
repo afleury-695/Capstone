@@ -5,7 +5,7 @@
     <input [(ngModel)]="searchTerm" class="form-control" id="searchbar" placeholder="🔎Search by Item or Category">
 <br>
     <div *ngFor="let item of (allItems | search: searchTerm)" class="card" style="width: 17.5rem; margin: 30px; padding: 10px; height: 470px;">
-
+        
         <div class="bootstrap-card">
         <app-shopping-card [item]=item ></app-shopping-card>
     </div>
