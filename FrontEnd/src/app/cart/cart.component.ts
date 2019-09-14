@@ -58,7 +58,7 @@ export class CartComponent implements OnInit {
 
   onIncreaseQty(item: Item) { 
     //go back and fix this to work with item.quantity == item.available
-    if(item.quantity < 700) { 
+    if(item.quantity < 500) { 
       item.quantity++; 
       this.calculateTotal(); 
     }

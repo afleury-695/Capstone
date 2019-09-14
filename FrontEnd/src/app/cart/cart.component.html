@@ -19,7 +19,7 @@
                 <button class="btn btn-info" [class.disabled]="item.quantity == item.available" (click)="onIncreaseQty(item)">+</button></td>
                 <td>{{ item.price | currency }}</td>
                 <td>{{ item.quantity * item.price | currency }}</td>
-                <td><button class="btn btn-danger float-right" (click)="onRemoveItemFromCart(i)">X</button></td>
+                <td><button class="btn btn-danger float-right" (click)="onRemoveItemFromCart(i)">Remove from Cart</button></td>
             </tr>
         </tbody>
     </table>

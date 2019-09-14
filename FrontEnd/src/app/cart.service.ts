@@ -20,10 +20,10 @@ export class CartService {
           item.quantity = qty; 
           itemAlreadyInCart = true; 
         }
-        return item; 
+        return i; 
       }); 
       if(!itemAlreadyInCart) { 
-        const newItem = new Item(item.id, item.name, item.price, item.isImported, item.category, item.quantity, item.image, item.qtyToPurchase);
+        const newItem = new Item(item.id, item.name, item.price, item.isImported, item.category, item.quantity, item.image, item.available, item.qtyToPurchase);
         newItem.id = item.id; 
         this.itemsInCart.push(newItem);
       }
@@ -40,6 +40,9 @@ export class CartService {
     }
     purchase(item: Item[]): Observable<null> {
       const url = `${this.apiUrl}/purchase`;
+
+      console.log(item);
       return this.http.post<null>(url, item);
+   
     }
   }

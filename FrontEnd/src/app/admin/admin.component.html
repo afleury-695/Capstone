@@ -1,8 +1,9 @@
 
 <div class="jumbotron">
   <h1> ADMIN PORTAL </h1>
-<h4> You must be a valid admin to access administrative rights. <br> <br> Please use caution when adding, removing, or editing existing entries.  
-</h4>
+  <hr>
+<h5> You must be a valid admin to access administrative rights. <br> <br> Please use caution when adding, removing, or editing existing entries.  
+</h5>
 <hr>
 <br> 
     <div class="container">
@@ -11,7 +12,7 @@
             <div class="form-group">
         
               <label for="nameItem">Name</label>
-              <input formControlName="name" type="text" class="form-control" id="nameItem" placeholder="Name of Item">
+              <input formControlName="name" type="text" class="form-control" id="nameItem" placeholder="Name of Item" [max]=18>
             
               <label for="categoryItem">Category</label>
               <input formControlName="category" type="text" class="form-control" id="categoryItem"

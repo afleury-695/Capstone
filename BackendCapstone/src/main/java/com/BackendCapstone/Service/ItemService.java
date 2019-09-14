@@ -46,7 +46,23 @@ public class ItemService {
         for(Item i: item ) {
             Item currItem= this.getItemById(i.getId());
 
+            //calculates the sales tax when "purchase" is clicked in frontend
+            if(currItem.getCategory().equals("Food") | currItem.getCategory().equals("Medical") | currItem.getCategory().equals("Luxury Items")) {
+                currItem.setSalesTax(0.0);
+            } else {
+                currItem.setSalesTax(currItem.getPrice() * 0.10);
+//            return this.salesTax = salesTax;
+            }
+
+            //calculates the import tax (if applicable) when purchase is clicked in frontend
+            if(currItem.getIsImported() == true) {
+                currItem.setImportTax(i.getPrice() * 0.05);
+            } else {
+               currItem.setImportTax(0.0);
+            }
             currItem.setQuantity(currItem.getQuantity() - i.getQuantity());
+
+            //this goes back up above updateitem
             this.updateItem(currItem, currItem.getId());
         }
     }

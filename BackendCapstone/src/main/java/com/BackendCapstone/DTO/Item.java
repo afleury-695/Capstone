@@ -41,6 +41,12 @@ public class Item {
 
     private String image;
 
+    //added
+    private double salesTax;
+
+
+    private double importTax;
+
 //getters and setters
 
     public int getId() {
@@ -67,11 +73,11 @@ public class Item {
         this.price = price;
     }
 
-    public boolean isImported() {
+    public boolean getIsImported() {
         return isImported;
     }
 
-    public void setImported(boolean imported) {
+    public void setIsImported(boolean imported) {
         isImported = imported;
     }
 
@@ -83,11 +89,39 @@ public class Item {
         this.category = category;
     }
 
-    public int getQuantity() { return quantity; }
+    public int getQuantity() {
+        return quantity;
+    }
 
-    public void setQuantity(int quantity) { this.quantity = quantity; }
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
 
-    public String getImage() { return image; }
+    public String getImage() {
+        return image;
+    }
 
-    public void setImage(String image) { this.image = image; }
-}
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    //set up
+
+    public double getSalesTax() {
+        return salesTax;
+    }
+
+    public double setSalesTax(double salesTax) {
+            return this.salesTax = salesTax;
+        }
+
+    public double getImportTax() {
+            return importTax;
+    }
+
+        public void setImportTax(double importTax) {
+        this.importTax = importTax;
+        }
+//        return this.importTax = importTax;
+    }
+
