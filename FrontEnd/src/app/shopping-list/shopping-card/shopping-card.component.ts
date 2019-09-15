@@ -53,7 +53,7 @@ export class ShoppingCardComponent implements OnInit {
   
   setTimeout(() => { 
       console.log(this.item)
-  }, 1500);
+  }, 1000);
 
 }
 }
