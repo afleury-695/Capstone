@@ -5,14 +5,17 @@ import { CartComponent } from './cart/cart.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdminGuard } from './admin/admin.guard';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { WelcomepageComponent } from './welcomepage/welcomepage.component';
 
 
 const routes: Routes = [
   { path: 'items', component: ShoppingListComponent },
   { path: 'cart', component: CartComponent},
   { path: 'admin', component: AdminComponent, canActivate: [AdminGuard] },
-  { path: '', redirectTo: 'items', pathMatch: 'full' },
-  { path: '**', component: PageNotFoundComponent}
+  { path: 'welcome', component: WelcomepageComponent},
+  { path: '', redirectTo: 'welcome', pathMatch: 'full' },
+  { path: '**', component: PageNotFoundComponent},
+ 
 
 ]
 

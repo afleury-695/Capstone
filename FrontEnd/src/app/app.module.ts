@@ -12,6 +12,7 @@ import { SearchPipe } from './search.pipe';
 import { ShoppingCardComponent } from './shopping-list/shopping-card/shopping-card.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { WelcomepageComponent } from './welcomepage/welcomepage.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ShoppingListComponent,
     SearchPipe,
     ShoppingCardComponent,
+    WelcomepageComponent,
    
   ],
   imports: [
