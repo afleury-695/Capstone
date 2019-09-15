@@ -1,8 +1,10 @@
 <div class="jumbotron" id="background-color">
     <h3> All Items </h3>
-    <p> Welcome to Ultimate Shopping Dallas! We pride ourselves on providing an incredible shopping experience.  Don't believe us? Check out our reviews.</p>
+    <p> Welcome to Ultimate Shopping Dallas! We pride ourselves on providing an incredible shopping experience.  Don't believe us? Check out <a href="/welcome">our reviews.</a></p>
     <hr>
+    <p> <strong> TOTAL ITEMS IN INVENTORY: </strong> {{ allItems.length }} </p>
     <input [(ngModel)]="searchTerm" class="form-control" id="searchbar" placeholder="🔎Search by Item or Category">
+     
 <br>
     <div *ngFor="let item of (allItems | search: searchTerm)" class="card" style="width: 17.5rem; margin: 30px; padding: 10px; height: 470px;">
         
