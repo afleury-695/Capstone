@@ -53,7 +53,4 @@ export class CartService {
       return this.http.post<null>(url, item);
     }
 
-    // addToCartWrapper(item: Item[], qty: number) { 
-
-    // }
   }

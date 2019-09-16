@@ -54,18 +54,6 @@ export class CartComponent implements OnInit {
     );
   }
 
-
-  // OnInitTax(item) { 
-  //   this.cartService.updateTax(item).subscribe(
-  //     (res: any) => { 
-  //       console.log("Went through"); 
-  //     },
-  //     err => { 
-  //       console.log(err)
-  //     }
-  //   );
-  // }
-
   calculateTotal() { 
     this.total = this.itemsInCart.reduce((total, currVal) => total + (currVal.price * currVal.quantity), 0)
   }
@@ -89,7 +77,6 @@ export class CartComponent implements OnInit {
   }
 
   onIncreaseQty(item: Item) { 
-    //go back and fix this to work with item.quantity == item.available
     if(item.quantity < 500) { 
       item.quantity++; 
       // this.calculateImported();

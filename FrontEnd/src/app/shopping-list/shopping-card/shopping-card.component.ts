@@ -30,10 +30,6 @@ export class ShoppingCardComponent implements OnInit {
     }
   }
 
-  // OnInitTax(item: Item[]) { 
-  //   this.cartService.updateTax(item);
-  // }
-
   OnInitTax(item: Item) { 
     this.cartService.updateTax(item).subscribe(
       (res: any) => { 
@@ -45,9 +41,6 @@ export class ShoppingCardComponent implements OnInit {
     );
   }
 
-  // setQtyToPurchase(item: Item, qty: number) { 
-  //   this.qtyToPurchase = this.qtyToPurchase; 
-  // }
   ngOnInit() {
     this.OnInitTax(this.item);
   

@@ -7,7 +7,7 @@ import { Item } from './items.service';
 export class SearchPipe implements PipeTransform {
 
   transform(value: Item[], searchTerm: string): Item[] {
-    // return value.filter(v => v.name.toLowerCase().includes(searchTerm.toLowerCase()));
+    
 
     return value.filter((item: Item) => { 
       if(item.name && item.name.toLowerCase().includes(searchTerm.toLowerCase())) { 

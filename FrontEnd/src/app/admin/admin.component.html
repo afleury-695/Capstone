@@ -28,9 +28,7 @@
               <label for="imageItem">Image</label>
               <input formControlName="image" type="text" class="form-control" id="imageItem" placeholder="Image URL">
 
-              <!-- <label for="isImportedItem">Imported</label>
-              <input formControlName="price" type="number" class="form-control" id="priceItem" placeholder="Enter True or False"> -->
-    
+          
             </div>
             <button *ngIf="itemIdBeingEdited !== undefined" type="button" class="btn btn-primary mx-2" (click)="onCancelEditItem()"> Cancel </button>
             <button type="submit" class="btn btn-primary">Submit</button> <br> <br>
