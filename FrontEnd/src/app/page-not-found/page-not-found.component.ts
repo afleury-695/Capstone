@@ -1,3 +1,5 @@
+//route for page not found.  Doesn't do anything but display the page not found message
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({

@@ -1,6 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { Item } from './items.service';
 
+//search pipe (searches by category and item name)
 @Pipe({
   name: 'search'
 })

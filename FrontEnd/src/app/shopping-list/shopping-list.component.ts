@@ -1,3 +1,5 @@
+//the items display component that displays the shopping-cards (bootstrap cards with each item on them)
+
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
 
@@ -31,7 +33,7 @@ export class ShoppingListComponent implements OnInit, OnDestroy {
       this.getSub.unsubscribe();
     }
   }
-
+//gets all items to display them in the bootstrap cards located as shopping-cards 
   getItems() { 
     this.getSub = this.itemService.getItems().subscribe(
       (res: any) => {

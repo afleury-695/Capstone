@@ -46,7 +46,7 @@ export class CartService {
       return this.http.post<null>(url, item);
       
     }
-    // posting the tax to the database on adding to cart
+    // posting the tax to the database on clicking add to cart button
     updateTax(item: Item): Observable<null> {
       const url = `${this.apiUrl}/taxed`;
       console.log(item);
