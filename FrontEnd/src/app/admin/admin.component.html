@@ -6,11 +6,12 @@
 </h5>
 <hr>
 <br> 
+
     <div class="container">
         <div class="row">
           <form [formGroup]="addItemForm" (ngSubmit)="onSubmitForm()">
             <div class="form-group">
-        
+                <h4> Add / Edit Item </h4><hr>
               <label for="nameItem">Name</label>
               <input formControlName="name" type="text" class="form-control" id="nameItem" placeholder="Name of Item" [max]=18>
             
@@ -35,9 +36,11 @@
             <button type="submit" class="btn btn-primary">Submit</button> <br> <br>
     
           </form>
+        
         </div>
         <div class="row">
           <div class="col-md-12">
+              <h1> Existing Items</h1>
             <div class="row mb-2" *ngFor="let item of allItems; let i = index">
               <div class="col-md-6">
                 {{ i + 1}}: {{ item.name }}
