@@ -3,14 +3,22 @@ package com.BackendCapstone.controller;
 import com.BackendCapstone.Controller.ItemController;
 import com.BackendCapstone.DTO.Item;
 import com.BackendCapstone.Service.ItemService;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.util.NestedServletException;
+
+import com.fasterxml.jackson.databind.ObjectWriter;
+import com.fasterxml.jackson.databind.SerializationFeature;
+import org.springframework.http.MediaType;
+import org.springframework.test.web.servlet.ResultActions;
+
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
@@ -19,9 +27,8 @@ import java.util.Optional;
 
 import static org.hamcrest.Matchers.hasSize;
 import static org.hamcrest.Matchers.is;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.mockito.Mockito.*;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -86,16 +93,74 @@ public class controllertests {
 
     }
 
+//    @Test
+//    public void ShouldReturnItemById() throws Exception {
+//        itemListX = Arrays.asList(item2);
+//        when(mockItemService.getItemById(itemListX.get(0).getId())).thenReturn(itemListX);
+//
+//        mockMvc.perform(get("/items/id" + itemListX.get(0).getId()))
+//                .andExpect(status().isOk())
+//                .andExpect(jsonPath("$", hasSize(1)))
+//                .andExpect(jsonPath("$[0].id", is(itemListX.get(0).getId())));
+//
+//        verify(mockItemService).getItemById(itemListX.get(0).getId());
+//    }
+
     @Test
-    public void ShouldReturnItemById() throws Exception {
-        itemListX = Arrays.asList(item2);
-        when(mockItemService.getItemById(itemListX.get(0).getId())).thenReturn(itemListX);
+    public void ShouldAddItems() throws Exception {
+        Item newItem = new Item();
+        newItem.setName("Celery");
+        newItem.setCategory("Food");
+        newItem.setPrice(4.00);
+        newItem.setImage(" ");
+        newItem.setQuantity(200);
+        newItem.setImportTax(0);
+        newItem.setSalesTax(0);
 
-        mockMvc.perform(get("/items/id" + itemListX.get(0).getId()))
+        when(mockItemService.addItem(newItem)).thenReturn(newItem);
+
+        ObjectMapper mapper = new ObjectMapper();
+        String objStr = mapper.writeValueAsString(newItem);
+
+        mockMvc.perform(post("/items")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(objStr))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$", hasSize(1)))
-                .andExpect(jsonPath("$[0].id", is(itemListX.get(0).getId())));
+                .andExpect(jsonPath("$.name", is(newItem.getName()))).andReturn();
 
-        verify(mockItemService).getItemById(itemListX.get(0).getId());
+        verify(mockItemService).addItem(newItem);
+
+
+    }
+
+    @Test
+    public void shouldDeleteItem() throws Exception {
+        mockMvc.perform(delete("/items/1"))
+                .andExpect(status().isOk()).andReturn();
+
+        verify(mockItemService).deleteItem(1);
+    }
+
+    @Test
+    public void ShouldUpdateItem() throws Exception {
+        Item newItem = new Item();
+        newItem.setId(1);
+        newItem.setName("Celery");
+        newItem.setCategory("Food");
+        newItem.setPrice(4.00);
+        newItem.setImage(" ");
+        newItem.setQuantity(200);
+        newItem.setImportTax(0);
+        newItem.setSalesTax(0);
+
+        ObjectMapper mapper = new ObjectMapper();
+        String objStr = mapper.writeValueAsString(newItem);
+
+        mockMvc.perform(put("/items/1")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(objStr))
+                .andExpect(status().isOk()).andReturn();
+
+        verify(mockItemService).updateItem(newItem, 1);
     }
 }

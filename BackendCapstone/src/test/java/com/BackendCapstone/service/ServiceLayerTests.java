@@ -35,6 +35,7 @@ public class ServiceLayerTests {
 
     List<Item> itemListX;
 
+    //setting up the testing
     @Before
     public void setUp() {
 
@@ -59,7 +60,7 @@ public class ServiceLayerTests {
         itemListX = Arrays.asList(item1, item2);
 
     }
-
+//get all items
     @Test
     public void shouldGetAllItems() {
         List<Item> expectedList = Arrays.asList(item1, item2);
@@ -67,11 +68,22 @@ public class ServiceLayerTests {
         assertEquals(expectedList, itemServiceX.getAllItems());
     }
 
-    @Test
-    public void shouldGetItemsById() {
-        List<Item> expectedList = Arrays.asList(item2);
-        List<Item> itemListX = Arrays.asList(item2);
-        when(itemRepoMock.findById(item2.getId())).thenReturn(itemListX);
-        assertEquals(expectedList, itemServiceX.getItemById(item2.getId()));
+//get item by id
+    @Test public void shouldGetItemById() {
+        when(itemRepoMock.getOne(1)).thenReturn(item1);
+        assertEquals(item1, itemServiceX.getItemById(1));
     }
+//adding items
+    @Test
+    public void shouldAddItem() {
+        when(itemRepoMock.save(item1)).thenReturn(item1);
+        assertEquals(item1, itemServiceX.addItem(item1));
+    }
+    //update items
+//    @Test
+//    public void shouldUpdateItem() {
+//        when(itemRepoMock.save(item1)).thenReturn(item1);
+//        assertEquals(item1, itemServiceX.updateItem(item1, 1));
+//    }
 }
+
