@@ -43,11 +43,17 @@ public class ItemService {
 
     //for purchasing the items via the PURCHASE route and updating the quantities we have in the actual database
     public void purchase(Item[] item) {
-        for(Item i: item ) {
-            Item currItem= this.getItemById(i.getId());
-
+        for (Item i : item) {
+            Item currItem = this.getItemById(i.getId());
+            currItem.setQuantity(currItem.getQuantity() - i.getQuantity());
+            this.updateItem(currItem, currItem.getId());
+            }
+        }
+//    }
+    public void taxed(Item item) {
+            Item currItem = this.getItemById(item.getId());
             //calculates the sales tax when "purchase" is clicked in frontend
-            if(currItem.getCategory().equals("Food") | currItem.getCategory().equals("Medical") | currItem.getCategory().equals("Luxury Items")) {
+            if (currItem.getCategory().equals("Food") | currItem.getCategory().equals("Medical") | currItem.getCategory().equals("Books")) {
                 currItem.setSalesTax(0.0);
             } else {
                 currItem.setSalesTax(currItem.getPrice() * 0.10);
@@ -55,16 +61,15 @@ public class ItemService {
             }
 
             //calculates the import tax (if applicable) when purchase is clicked in frontend
-            if(currItem.getIsImported() == true) {
-                currItem.setImportTax(i.getPrice() * 0.05);
+            if (currItem.getIsImported() == true) {
+                currItem.setImportTax(currItem.getPrice() * 0.05);
             } else {
-               currItem.setImportTax(0.0);
+                currItem.setImportTax(0.0);
             }
-            currItem.setQuantity(currItem.getQuantity() - i.getQuantity());
+//            currItem.setQuantity(currItem.getQuantity() - item.getQuantity());
 
             //this goes back up above updateitem
             this.updateItem(currItem, currItem.getId());
         }
     }
-
-}
+//}
