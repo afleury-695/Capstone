@@ -57,5 +57,10 @@ public class ItemController {
     public void purchase(@RequestBody Item[] item) {
         itemService.purchase(item);
     }
+       @RequestMapping(value = "/taxed", method = RequestMethod.POST)
+    public void taxed(@RequestBody Item item) {
+        itemService.taxed(item);
+    }
+
 
 }
